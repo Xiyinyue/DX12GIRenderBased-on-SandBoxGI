@@ -1,9 +1,8 @@
 # About
-Simple C++/DX12 framework for my bachelor thesis "Dynamic real-time global illumination algorithms on modern GPU hardware and software" ([paper](thesis.pdf)).
+a toyRender for searching work tempVersion
+Frame from steaklive/DXR-Sandbox-GI
 
-Video: https://youtu.be/4YUWw8x4XXc
 
-![picture](screenshots/main.png)
 
 # Features
 - Deferred Rendering
@@ -14,44 +13,6 @@ Video: https://youtu.be/4YUWw8x4XXc
 - SSAO
 - Asynchronous compute
 - DXR: Reflections + Blur, Ambient Occlusion + Blur
-
-# Optimizations
-Reflective Shadow Mapping:
-- main pass in compute (+async)
-- efficient upsample & blur of main pass' output in compute (+async)
-
-![picture](screenshots/RSM_async.png)
-
-Light Propagation Volumes:
-- flux downsample in compute
-- DX12 bundle for propagation passes
-
-![picture](screenshots/LPV_w_downsampling.png)
-
-Voxel Cone Tracing:
-- main pass in compute (+async)
-- anisotropic mipmapping passes in compute (+async)
-- efficient upsample & blur of main pass' output in compute (+async)
-
-![picture](screenshots/VCT_async.png)
-
-SSAO:
-- TODO: downscaled version
-- TODO: move to compute with LDS optimizations
-- TODO: move to async
-
-RTAO:
-- TODO: replace blur with proper filtering
-
-# Comparison
-No GI -> RSM -> LPV -> VCT -> offline path-tracer
-
-![picture](screenshots/comparison.png)
-
-# Additional screenshots
-![picture](screenshots/1.png)
-![picture](screenshots/2.png)
-![picture](screenshots/3.png)
 
 # Dependencies
 - Assimp
