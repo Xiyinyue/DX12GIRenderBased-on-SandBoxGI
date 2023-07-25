@@ -1,6 +1,7 @@
 # About
 a toyRender for searching work tempVersion
-Frame from steaklive/DXR-Sandbox-GI
+Frame from steaklive/DXR-Sandbox-GI  
+and i will write a tutorial for it 
 see more build details from PDF
 
 
