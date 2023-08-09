@@ -111,7 +111,7 @@ mRasterizerStateShadow.FillMode = D3D12_FILL_MODE_SOLID;
 我们看一下real time rendering对于正交矩阵的描述
 ![[Pasted image 20230722131654.png]]
 ![[Pasted image 20230722131713.png]]
-
+!(附件\\Pasted image 20230722131713.png)
 
 ##### Reflective shadow mapping
 然后就是重点，对于RSM的渲染，
