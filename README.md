@@ -3,7 +3,9 @@ a toyRender for searching work tempVersion
 Frame from steaklive/DXR-Sandbox-GI  
 and i will write a tutorial for it 
 see more build details from PDF
-  
+
+here is LPV 
+[https://github.com/Xiyinyue/DX12GIRenderBased-on-SandBoxGI/blob/main/LPV%20Toturial.md]
 ![QQ截图20230725141154](https://github.com/Xiyinyue/DX12GIRenderBased-on-SandBoxGI/assets/83278582/1a78b977-087a-444e-852d-b2c1277a7e2d)
 
 
