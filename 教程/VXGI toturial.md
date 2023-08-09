@@ -201,7 +201,7 @@ void CSMain(uint3 Gid : SV_GroupID, uint3 GTid : SV_GroupThreadID, uint3 DTid : 
 
 那么，我们现在思,现在的 Voxel 里面是什么：
 现在的 Voxel 是一堆带有颜色的格子，是真正带有 RGB 的格子,这里我们用的是 3D mipmap，而不是 clip map，并不能生成类似于 NVIDIA 演示的那种效果
-![picture](Pasted image 20230725223029.png)
+![picture](20230725223029.png)
 记住，现在的纹理是，256\*256\*256 个带有颜色的格子
 
 但是，我们的生成的新 3D 纹理是看什么：
@@ -227,14 +227,14 @@ voxelTextureResultPosX[DTid] =
 因为新的纹理是 128\*128\*128
 那么每个格子都有索引，而且是一个 int3 类型的索引
 下面我们以(1,0,0)举例：先熟悉一下我们的坐标系
-![picture](Pasted image 20230725224112.png)
+![picture](20230725224112.png)
 绿为 X 轴正方向，
 红为 Y 轴正方向，
 蓝为 Z 轴正方向。
 以(1,0,0)举例，则为图中的带有 X 标志的方块，以方块代指体素
 那么*sourcePos*为(2,0,0);那么我们看看，我们的
 `(values[4]  + values[5]  +values[6] +values[7]  )`是哪几个方块
-![picture](Pasted image 20230725224953.png)
+![picture](20230725224953.png)
 我帮大家标出来了，是四个棕色的方块
 **不要想太多，这里只是简单卷积，选取八个方块，然后抉择出有意义四个值**
 **不要想太多，这里只是简单卷积，选取八个方块，然后抉择出有意义四个值**
@@ -283,7 +283,7 @@ X 方块的值是这四个方块加权平均回来的
 ```
 
 正好选取的就是这四个
-![picture](Pasted image 20230725234321.png)
+![picture](20230725234321.png)
 同样的道理，假如面片在棕色处，朝向 X 轴负方向
 会不会有贡献？不会有贡献，那怎么办，重新选取新的八个里面，面朝面片的四个
 这里我们已经把面片朝向固定了，所以直接对所有的 8 方块进行如此的真实值提取
@@ -427,7 +427,7 @@ float4 TraceCone(float3 pos, float3 normal, float3 direction, float aperture, ou
 ```
 
 解释一下 diameter 是什么
-![picture](Pasted image 20230726005140.png)
+![picture](20230726005140.png)
 https://github.com/jose-villegas/VCTRenderer#voxel-illumination
 Cone:60°
 half of it 30°
